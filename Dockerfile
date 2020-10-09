@@ -8,3 +8,6 @@ RUN python3 -m pip install --use-feature=2020-resolver --no-cache \
     matplotlib \
     naas-drivers \
     naas
+
+RUN apt-get update && \
+    apt-get -y install redir tzdata tesseract-ocr libtesseract-dev libcairo2-dev
