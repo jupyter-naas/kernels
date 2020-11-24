@@ -22,6 +22,10 @@ RUN python3 -m pip install --use-feature=2020-resolver --no-cache \
     naas
 
 USER root
-RUN fix-permissions /home/$NB_USER
+
+RUN mkdir /home/$NB_USER && \
+    mkdir /home/$NB_USER/ftp && \
+    fix-permissions /home/$NB_USER
+
 RUN apt-get update && \
     apt-get -y install redir tzdata tesseract-ocr libtesseract-dev libcairo2-dev
