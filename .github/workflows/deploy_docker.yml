@@ -35,7 +35,7 @@ jobs:
         uses: jupyter-naas/docker-smart-tag-action@1.0.0
         with:
           ref: ${{ github.event.client_payload.ref }}
-          docker_image: jupyternaas/kernel
+          docker_image: jupyternaas/kernels
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
