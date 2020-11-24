@@ -4,6 +4,7 @@ ENV VERSION 0.1.0
 
 RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install --use-feature=2020-resolver --no-cache \
+    notebook==6.1.5 \
     nbconvert \
     nbformat \
     nbresuse \
