@@ -1,4 +1,4 @@
-FROM elyra/kernel-py:2.3.0
+FROM elyra/kernel-py:2.5.0
 
 ENV VERSION 0.1.0
 
@@ -10,14 +10,14 @@ ENV NB_GROUP=21
 ENV TZ Europe/Paris
 
 RUN python3 -m pip install --upgrade pip
-RUN python3 -m pip install --use-feature=2020-resolver --no-cache \
+RUN python3 -m pip install --no-cache \
     notebook==6.1.5 \
-    nbconvert \
-    nbformat \
-    nbresuse \
-    ipywidgets \
-    ipympl \
-    matplotlib \
+    nbdime==3.0.0b1  \
+    nbformat==5.1.2 \
+    nbconvert==6.0.7 \
+    ipywidgets==7.6.3 \
+    ipympl==0.6.3 \
+    matplotlib==3.3.4 \
     naas-drivers \
     naas
 
